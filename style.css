@@ -105,7 +105,7 @@ body {
 
 @media screen and (max-width: 550px) {
     body {
-        margin: 5% 0;
+        margin: 30px 0;
     }
 
     .info {
