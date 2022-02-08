@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #031e36;
+    font-family: 'Fredoka One', cursive;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.info {
+    display: flex;
+    width: 480px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.restart {
+    background-color: #aa3607;
+    color: #021322;
+    border-radius: 10px;
+    box-shadow: 0.5px 3px 1px #021322;
+    padding: 10px;
+    font-size: 1.2em;
+    margin: 10px;
+}
+
+.tictactoe {
+    font-size: 1.5em;
+}
+
+.winner {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #2a8adf;
+    color: #021322;
+    border-radius: 10px;
+    box-shadow: 0.5px 3px 1px #021322;
+    padding: 10px;
+    font-size: 1.2em;
+    margin: 10px;    
+}
+
+.winner > img {
+    width: 25px;
+}
+
+.volume {
+    background-color: #9b9b9b;
+    padding: 8px;
+    border-radius: 10px;
+    color: #021322;
+    margin: 10px 10px 10px 0;
+    box-shadow: 0.5px 3px 1px #021322;
+}
+
+.stage {
+    min-width: 500px;
+    min-height: 500px;
+}
+
+.square {
+    width: 150px;
+    height: 150px;
+    background-color: #052847;
+    border-radius: 15px;
+    box-shadow: 0.5px 7px 2px #021322;
+    display: inline-block;
+    margin: 5px;
+}
+
+.square:hover, .restart, .volume {
+    cursor: pointer;
+}
+
+.p1::before {
+    position: absolute;
+    content: '';
+    background-image: url(images/multiply_2716-fe0f.png);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    transform: translateX(-50%) translateY(25%);
+}
+
+.p2::before {
+    position: absolute;
+    content: '';
+    background-image: url(images/hollow-red-circle_2b55.png);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    transform: translateX(-50%) translateY(25%);
+}
+
+@media screen and (max-width: 550px) {
+    body {
+        margin: 5% 0;
+    }
+
+    .info {
+        width: 350px;
+        margin-bottom: 20px;
+    }
+
+    .tictactoe {
+        font-size: 1.2em;
+    }
+
+    .restart, .winner {
+        font-size: 1em;
+    }
+
+    .volume img {
+        width: 18px;
+    }
+
+    .square {
+        height: 100px;
+        width: 100px;
+    }
+
+    .stage {
+        min-width: max-content;
+        min-height: max-content;
+    }
+
+    .p1::before {
+        width: 65px;
+        height: 65px;
+    }
+
+    .p2::before {
+        width: 65px;
+        height: 65px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .info {
+        width: 300px;
+        margin-bottom: 10px;
+    }
+
+    .tictactoe {
+        font-size: 0.9em;
+    }
+
+    .restart, .winner {
+        font-size: 0.8em;
+    }
+
+    .square {
+        height: 85px;
+        width: 85px;
+    }
+
+    .p1::before, .p2::before {
+        width: 55px;
+        height: 55px;
+    }
+}
